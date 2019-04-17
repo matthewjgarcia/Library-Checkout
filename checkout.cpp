@@ -1,5 +1,5 @@
-// Name
-// Section #
+// Matthew Garcia
+// Section 2
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -158,7 +158,7 @@ void viewBooks(vector<Book *> &book)
       temp = 0; //The temp variable will be changed if the if statement runs but It does not happen
 
     }
-    if (temp == 1)
+    if (temp == 1) // If it does not go through the if statement then there is no avaliable books
     {
       cout << "No avaliable books";
     }
@@ -169,7 +169,7 @@ void viewBooks(vector<Book *> &book)
 void viewRentals(vector<Book *> &books, vector <Person *> &myCardholders)
 {
   int cnt = 0;
-  for (size_t x = 0; x < myCardholders.size(); x++)
+  for (size_t x = 0; x < myCardholders.size(); x++)//needed to run the for loop
   {
     for (int i = 0; i < books.size(); i++)
     {
@@ -254,7 +254,7 @@ void closeCard(vector<Person *> & card)
         }
         else if (choice == 'n')
         {
-          cnt*=4;
+          cnt*=2;
           cout << "Thank you";
           break;
         }
@@ -293,7 +293,7 @@ void readBooks(vector<Book *> & books) {
       getline(inFile, author);
       getline(inFile, cat);
       cout << bookID << " " << title << " "  << author << " " << cat;
-      Book *bookPtr = new Book(bookID, title, author, cat);
+      Book *bookPtr = new Book(bookID, title, author, cat); // allows the book to push the items to the pointer
       books.push_back(bookPtr);
     }
 }
